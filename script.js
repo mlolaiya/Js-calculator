@@ -1,31 +1,21 @@
-/* Declaring variable */
-var num1 = prompt('Enter first number');
-var Oprtr = prompt('Select Operation to perform +, -, *, /'); //Operators
-var num2 = prompt('Enter second number');
+const num1 = parseFloat(prompt("Enter first number"));
+        const operator = prompt('Enter operator(+, -, *, /)');
+        const num2 = parseFloat(prompt("Enter second number"));
 
-//I use switch to set out the conditions
-switch(Oprtr)  
-{
-    case '+':
-        var result = parseFloat(num1) + parseFloat(num2);
-        console.log(`${num1} + ${num2} = ${result}`);
-        break;
-    case '-':
-        var result = parseFloat(num1) - parseFloat(num2);
-        console.log(`${num1} - ${num2} = ${result}`);
-        break;
-    case '*':
-        var result = parseFloat(num1) * parseFloat(num2);
-        console.log(`${num1} * ${num2} = ${result}`);
-        break;  
-    case '/':
-        var result = parseFloat(num1) / parseFloat(num2);
-        console.log(`${num1} / ${num2} = ${result}`);
-        break; 
-    case '/':
-        var result = parseFloat(num1) / parseFloat(num2);
-        console.log(`${num1} / ${num2} = ${result}`);
-        break; 
-    default:
-        console.log('Invalid Operator')
-}
+        let output = 0;
+
+        if(isNaN(num1) || isNaN(num2)){
+            alert('Invalid entry');
+        } else{
+            if(operator == '+'){
+            output = num1 + num2;
+        }else if(operator == '-'){
+            output = num1 - num2;
+        }else if(operator == '*'){
+            output = num1 * num2;
+        }else if(operator == '/'){
+            output = num1 / num2;
+        }
+        
+        alert('answer =' + ' ' + output)
+        }
